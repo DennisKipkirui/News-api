@@ -7,7 +7,7 @@
         {% if title %}
         <title> {{ title }}</title>
         {% else %}
-        <title> News Highlights </title>
+        <title>NEWS HIGHLIGHTS </title>
         {% endif %}
     </head>
         {% block content %}
@@ -15,17 +15,17 @@
     <br>
     <div class="container">
         <form style="margin-left: -95px">
-            <input type="text" name="article_query" placeholder="Search for Articles... " class="form-control" style="width: 400px">
+            <input type="text" name="article_query" placeholder="Search for Articles... " class="form-control" style="width: 500px">
             <br>
             <input type="submit"  value="Submit" class="btn btn-primary">
         </form>
     
     </div>
     <br>
-        <div style="margin-left: 100px;">
-                            <h2 class="News" style="font-weight: bold;"> News Sources</h2>
+        <div style="margin-left: 90px;">
+                            <h2 class="News" style="font-weight: bolder; font-family: Georgia, 'Times New Roman', Times, serif; color: blue;">NEWS SOURCE</h2>
                                 <br>
-                            <div class="grid-container" style="display: grid;">
+                            <div class="grid-container" style="display: -ms-flexbox;">
     
                             {% for general_category in general %}
                 
@@ -42,8 +42,8 @@
     
         <br><br>
         <div class="footer">
-        <footer style="color: yellowgreen; font-weight: bolder;">
-                    <p style="text-align: center;"> &copy; 2020 || Dennis Kipkirui </p>
+        <footer style="color:green; font-weight: bolder;">
+                    <p style="text-align: left;"> &copy; 2020 || Dennis Kipkirui Mutai </p>
         </footer>
         </div>
         {% endblock%}
