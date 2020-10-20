@@ -1,18 +1,51 @@
-<!-- Content block -->
-{% block content %}
-<!-- Popular movie -->
-<h3> Popular Movies</h3>
-<ul>
+
+<body>
+    {% extends 'base.html'%}
     
-</ul>
-<!-- Upcoming movie  -->
-<h3> Upcoming Movies </h3>
-<ul>
+    <head>
+        <meta charset="UTF-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> News Highlights </title>
+        {% endif %}
+    </head>
+        {% block content %}
+              <link rel="stylesheet" href="{{url_for('static',filename='css/index.css') }}" type='text/css'>
+    <br>
+    <div class="container">
+        <form style="margin-left: -95px">
+            <input type="text" name="article_query" placeholder="Search for Articles... " class="form-control" style="width: 400px">
+            <br>
+            <input type="submit"  value="Submit" class="btn btn-primary">
+        </form>
     
-</ul>
-<!-- Now showing movie -->
-<h3>Now Showing</h3>
-<ul>
-   
-</ul>
-{% endblock%}
+    </div>
+    <br>
+        <div style="margin-left: 100px;">
+                            <h2 class="News" style="font-weight: bold;"> News Sources</h2>
+                                <br>
+                            <div class="grid-container" style="display: grid;">
+    
+                            {% for general_category in general %}
+                
+                            <a  href="/newsarticle/{{general_category.id}}"
+                                class="list-group-item list-group-item " style="width: 40rem;">{{general_category.name}}</a>
+                            {% endfor %}
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    
+        <br><br>
+        <div class="footer">
+        <footer style="color: yellowgreen; font-weight: bolder;">
+                    <p style="text-align: center;"> &copy; 2020 || Dennis Kipkirui </p>
+        </footer>
+        </div>
+        {% endblock%}
+    </body>
+    
